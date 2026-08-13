@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Claude Terminal Bridge</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="header">
+        <h2>Claude Terminal Bridge</h2>
+    </div>
+    
+    <div class="section">
+        <div class="status-row">
+            <span>Rust Bridge</span>
+            <span id="rust-status" class="badge disconnected">Disconnected</span>
+        </div>
+        <div class="status-row">
+            <span>Claude Tab</span>
+            <span id="claude-status" class="badge disconnected">Disconnected</span>
+        </div>
+    </div>
+
+    <div class="section" id="token-section">
+        <label for="token-input">Session Token:</label>
+        <div class="input-row">
+            <input type="text" id="token-input" placeholder="Paste token from terminal">
+            <button id="save-token-btn">Connect</button>
+        </div>
+    </div>
+
+    <div class="section">
+        <h4>Conversations</h4>
+        <div id="conversations-list">
+            <!-- Populated via JS -->
+            <p class="empty-state">No active Claude tabs detected.</p>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
